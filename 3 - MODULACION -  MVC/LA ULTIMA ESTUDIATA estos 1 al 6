@@ -1,0 +1,38 @@
+2. ¿Cómo compruebo los Mantenimientos del Sistema (CRUD)?
+Los scripts han creado las interfaces para varios de estos mantenimientos. 
+
+
+
+La mejor forma de comprobarlo es ejecutar la aplicación y navegar a las vistas correspondientes.
+Aquí está el estado de cada mantenimiento CRUD basado en el código generado:
+
+
+Mantenimiento (Entidad)	Create (Crear)	Read (Leer)	Update (Actualizar)	Delete (Eliminar)	Comentarios
+
+Rutas	Sí (Diálogo en admin/rutas/lista.xhtml)	Sí (Tabla en la misma vista)	No (Faltaría un botón "Editar")	No (Faltaría un botón "Eliminar")	La base para C y R está completa. U y D son fáciles de agregar.
+
+Paradas	No	No	No	No	Los scripts crearon la entidad Parada.java pero no la vista de mantenimiento. Es un punto a desarrollar.
+
+Tarifas	No	No	No	No	Los scripts crearon la entidad Tarifa.java pero no la vista de mantenimiento. Es un punto a desarrollar.
+
+Unidades (Autobuses)	Sí (Diálogo en admin/flota/lista.xhtml)	Sí (Tabla en la misma vista)	No (Faltaría un botón "Editar")	No (Faltaría un botón "Eliminar")	La base para C y R está completa. U y D son fáciles de agregar.
+
+Roles y Permisos	Sí (Automático vía UsuarioService.java)	No (No hay vista de admin)	No	No	Los roles se crean al iniciar la app. La asignación es el siguiente punto.
+
+Tipos de Transacción	Sí (Automático vía BilleteraService.java)	No (No hay vista de admin)	No	No	Los tipos ("RECARGA", "PAGO_PASAJE") se crean al iniciar la app.
+
+Conclusión: Los mantenimientos más visibles (Rutas y Autobuses) tienen implementadas las funciones de Crear y Leer. Las funciones de Actualizar y Eliminar requerirían añadir botones a 
+las tablas y lógica en los beans, pero la base está ahí. Otros mantenimientos (Paradas, Tarifas) están pendientes.
+
+
+
+
+
+
+
+
+
+
+
+
+Implementar la Seguridad (Filtro): El paso final para una aplicación real sería activar el AuthFilter.java para que compruebe el rol del usuario en CADA petición, no solo en el login. Esto evitaría que un pasajero pueda acceder a .../admin/dashboard.xhtml simplemente escribiendo la URL.
