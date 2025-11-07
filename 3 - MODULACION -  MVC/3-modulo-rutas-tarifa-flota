@@ -1,0 +1,45 @@
+﻿/home/tu_usuario/Proyectos/<PROJECT_NAME>/
+│
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   └── com/
+    │   │       └── sistema_transporte/
+    │   │           ├── flota/
+    │   │           │   ├── bean/
+    │   │           │   │   └── GestionAutobusesBean.java # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │   ├── dao/
+    │   │           │   │   └── AutobusDAO.java           # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │   └── entity/
+    │   │           │       └── Autobus.java              # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │
+    │   │           ├── rutas/
+    │   │           │   ├── bean/
+    │   │           │   │   ├── GestionParadasBean.java   # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │   │   └── GestionRutasBean.java     # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │   ├── dao/
+    │   │           │   │   ├── ParadaDAO.java            # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │   │   ├── RutaDAO.java              # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │   │   └── TarifaDAO.java            # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │   └── entity/
+    │   │           │       ├── Parada.java               # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │       ├── Ruta.java                 # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │       └── Tarifa.java               # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │
+    │   │           └── shared/
+    │   │               ├── converter/                      # <- NUEVO DIRECTORIO CREADO.
+    │   │               │   └── EntityConverter.java      # <- NUEVO ARCHIVO CREADO Y POBLADO.
+    │   │               │
+    │   │               └── dao/                          # <- NUEVO DIRECTORIO CREADO.
+    │   │                   └── GenericDAO.java           # <- NUEVO ARCHIVO CREADO Y POBLADO.
+    │   │
+    │   └── webapp/
+    │       ├── admin/
+    │       │   ├── flota/
+    │       │   │   └── lista.xhtml       # <- POBLADO con la interfaz CRUD para Autobuses.
+    │       │   ├── paradas/
+    │       │   │   └── lista.xhtml       # <- POBLADO con la interfaz CRUD para Paradas.
+    │       │   └── rutas/
+    │       │       └── lista.xhtml       # <- POBLADO con la interfaz CRUD para Rutas.
+    │       │
+    │       └── template.xhtml              # <- MODIFICADO para añadir los nuevos enlaces de administración.

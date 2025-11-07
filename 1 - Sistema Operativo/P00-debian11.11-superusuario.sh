@@ -77,12 +77,19 @@ apt update
 apt install sudo
 
    
-   
 
-#vamos con la interfaz  XFCE 
 
-sudo apt update
-sudo apt install task-xfce-desktop
+# MONTAR y EJECUTAR VBoxLinuxAdditions.run desde VIRTUAL BOX y DESDE TERMINAL 
+
+cd /mnt/cdrom
+sudo ./VBoxLinuxAdditions.run
 sudo reboot
 
 
+   
+
+#vamos con la interfaz  XFCE 
+sudo dpkg --configure -a
+sudo apt update
+sudo apt install task-xfce-desktop
+sudo reboot

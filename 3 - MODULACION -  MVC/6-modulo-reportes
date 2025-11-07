@@ -1,0 +1,19 @@
+﻿/home/tu_usuario/Proyectos/<PROJECT_NAME>/
+│
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/
+        │       └── sistema_transporte/
+        │           └── reportes/
+        │               ├── dao/
+        │               │   └── ReporteDAO.java          # <- NUEVO ARCHIVO CREADO Y POBLADO.
+        │               ├── dto/
+        │               │   ├── IngresosPorRutaDTO.java  # <- POBLADO CON CÓDIGO FUNCIONAL.
+        │               │   └── PasajerosHoraPicoDTO.java# <- POBLADO CON CÓDIGO FUNCIONAL.
+        │               └── service/
+        │                   └── AnaliticaService.java      # <- POBLADO CON CÓDIGO FUNCIONAL.
+        │
+        └── webapp/
+            └── admin/
+                └── dashboard.xhtml     # <- SOBRESCRITO para añadir los paneles de estadísticas y gráficos.

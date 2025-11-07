@@ -1,0 +1,41 @@
+﻿/home/
+└── tu_usuario/                 # Directorio HOME del usuario que ejecuta el script
+    ├── Proyectos/
+    │   └── <PROJECT_NAME>/     # <- DIRECTORIO RAÍZ DEL PROYECTO. CREADO POR EL SCRIPT.
+    │       │
+    │       ├── jdk-8u112-linux-x64.tar.gz  # Copiado desde la carpeta compartida por el script.
+    │       ├── glassfish-4.1.1.zip       # Copiado desde la carpeta compartida por el script.
+    │       ├── primefaces-8.0.jar      # Copiado desde la carpeta compartida por el script.
+    │       │
+    │       ├── jdk1.8.0_112/     # <- Directorio CREADO y POBLADO por el script al descomprimir el JDK.
+    │       │   ├── bin/          # Contiene los ejecutables del JDK.
+    │       │   │   ├── java      # Ejecutable de la Máquina Virtual de Java (JVM).
+    │       │   │   ├── javac     # El compilador de Java.
+    │       │   │   ├── jar       # Herramienta para crear archivos .jar.
+    │       │   │   ├── javadoc   # Generador de documentación.
+    │       │   │   └── ... (muchos otros binarios)
+    │       │   ├── jre/          # Java Runtime Environment (incluido en el JDK).
+    │       │   ├── lib/          # Librerías del JDK (ej. tools.jar).
+    │       │   ├── include/      # Archivos de cabecera para C/C++ (JNI).
+    │       │   ├── COPYRIGHT
+    │       │   ├── LICENSE
+    │       │   └── README.html
+    │       │
+    │       ├── glassfish4/     # <- Directorio CREADO y POBLADO por el script al descomprimir GlassFish.
+    │       │   ├── bin/
+    │       │   │   └── asadmin   # HERRAMIENTA CLAVE de línea de comandos para administrar GlassFish.
+    │       │   ├── glassfish/
+    │       │   │   ├── domains/
+    │       │   │   │   └── domain1/  # El dominio por defecto.
+    │       │   │   │       ├── autodeploy/ # Directorio para despliegue automático de .war.
+    │       │   │   │       ├── config/     # Configuración del dominio (domain.xml).
+    │       │   │   │       └── lib/        # Librerías específicas del dominio (ej. drivers JDBC).
+    │       │   │   ├── lib/          # Librerías globales del servidor.
+    │       │   │   └── modules/      # Módulos del servidor (implementaciones de Java EE, JSF, etc.).
+    │       │   ├── mq/             # Broker de mensajería (OpenMQ).
+    │       │   └── ... (otros directorios de GlassFish)
+    │       │
+    │       └── lib/              # <- Directorio CREADO por el script.
+    │           └── primefaces-8.0.jar  # <- Copiado por el script para uso en compilación futura.
+    │
+    └── project-env             # <- ARCHIVO DE ENTORNO. CREADO POR EL SCRIPT en el HOME del usuario.

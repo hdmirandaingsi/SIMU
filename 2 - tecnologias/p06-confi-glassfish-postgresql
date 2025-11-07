@@ -1,0 +1,30 @@
+﻿/
+├── home/
+│   └── tu_usuario/                 # Directorio HOME del usuario que ejecuta el script.
+│       │
+│       ├── .project-env            # <- ARCHIVO DE ENTRADA. El SCRIPT LO LEE para obtener GLASSFISH_HOME.
+│       │
+│       └── Proyectos/
+│           └── <PROJECT_NAME>/
+│               └── glassfish4/     # <- Directorio de la instalación de GlassFish.
+│                   ├── bin/
+│                   │   └── asadmin # <- HERRAMIENTA CLAVE. El script la ejecuta múltiples veces para configurar el servidor.
+│                   │
+│                   └── glassfish/
+│                       └── domains/
+│                           └── domain1/
+│                               ├── config/
+│                               │   └── domain.xml  # <- ARCHIVO OBJETIVO. Es el corazón de la configuración de GlassFish.
+│                               │                   #    TODOS LOS COMANDOS 'asadmin create-*' y 'delete-*' MODIFICAN este archivo.
+│                               │
+│                               └── lib/          # <- Directorio de librerías para el dominio.
+│                                   │
+│                                   ├── postgresql-42.2.5.jar  # <- CREADO/COPIADO POR EL SCRIPT si no existe.
+│                                   │
+│                                   └── primefaces-8.0.jar     # <- CREADO/COPIADO POR EL SCRIPT si no existe.
+│
+└── media/
+    └── sf_CompartoVIRTUALBOX/        # Carpeta compartida de VirtualBox (origen de los archivos).
+        └── SoftwarePRN315/
+            ├── postgresql-42.2.5.jar # <- ARCHIVO FUENTE. El script lo lee y copia.
+            └── primefaces-8.0.jar    # <- ARCHIVO FUENTE. El script lo lee y copia.

@@ -1,0 +1,29 @@
+﻿/home/tu_usuario/Proyectos/<PROJECT_NAME>/
+│
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   └── com/
+    │   │       └── sistema_transporte/
+    │   │           └── billetera/
+    │   │               ├── bean/
+    │   │               │   └── BilleteraBean.java         # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               ├── dao/
+    │   │               │   ├── TarjetaDAO.java            # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               │   └── TransaccionDAO.java        # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               ├── entity/
+    │   │               │   ├── Tarjeta.java               # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               │   ├── TipoTransaccion.java       # <- POBLADO CON CÓDIGO FUNCIONAL (Enum).
+    │   │               │   └── Transaccion.java           # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               └── service/
+    │   │                   └── BilleteraService.java      # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │
+    │   ├── resources/
+    │   │   └── META-INF/
+    │   │       └── persistence.xml     # <- SOBRESCRITO para añadir las nuevas entidades (Tarjeta, Transaccion).
+    │   │
+    │   └── webapp/
+    │       ├── pasajero/
+    │       │   └── billetera.xhtml           # <- POBLADO con la interfaz para ver saldo, recargar y ver historial de transacciones.
+    │       │
+    │       └── template.xhtml              # <- SOBRESCRITO para añadir el nuevo enlace "Mi Billetera" al menú.

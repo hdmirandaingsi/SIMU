@@ -1,0 +1,32 @@
+﻿/home/tu_usuario/Proyectos/<PROJECT_NAME>/
+│
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/
+        │       └── sistema_transporte/
+        │           ├── billetera/
+        │           │   └── service/
+        │           │       └── BilleteraService.java      # <- SOBRESCRITO para añadir el método 'pagarPasaje' y nuevas inyecciones.
+        │           │
+        │           ├── historial/
+        │           │   ├── bean/
+        │           │   │   └── HistorialBean.java         # <- POBLADO CON CÓDIGO FUNCIONAL.
+        │           │   └── service/
+        │           │       └── ConsultaHistorialService.java # <- POBLADO CON CÓDIGO FUNCIONAL.
+        │           │
+        │           └── viajes/
+        │               ├── dao/
+        │               │   └── ViajeDAO.java              # <- NUEVO ARCHIVO CREADO Y POBLADO (asumiendo que viajes/dao no existía).
+        │               └── entity/
+        │                   └── Viaje.java                 # <- POBLADO CON CÓDIGO FUNCIONAL.
+        │
+        ├── resources/
+        │   └── META-INF/
+        │       └── persistence.xml     # <- SOBRESCRITO para añadir la nueva entidad 'Viaje'.
+        │
+        └── webapp/
+            ├── pasajero/
+            │   └── historial.xhtml           # <- POBLADO con la tabla para mostrar el historial de viajes.
+            │
+            └── template.xhtml              # <- SOBRESCRITO para añadir el nuevo enlace "Mi Historial" al menú.

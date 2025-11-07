@@ -1,0 +1,22 @@
+﻿/home/
+└── tu_usuario/                 # Directorio HOME del usuario que ejecuta el script.
+    │
+    ├── .bashrc                 # <- ARCHIVO OBJETIVO PRINCIPAL.
+    │                           #    Es un script de shell que se ejecuta cada vez que se inicia una nueva terminal interactiva.
+    │                           #    El SCRIPT AÑADE LÍNEAS a este archivo si no existen ya.
+    │
+    ├── .profile                # (Archivo relacionado, se ejecuta en sesiones de login, no suele ser modificado para esto)
+    │
+    ├── project-env             # <- ARCHIVO DE ENTRADA. El SCRIPT LO LEE Y VALIDA.
+    │                           #    Contiene las exportaciones de variables de entorno (JAVA_HOME, etc.).
+    │                           #    Fue creado por un script anterior (p02/p03).
+    │
+    └── Proyectos/
+        └── <PROJECT_NAME>/
+            ├── jdk1.8.0_112/
+            │   └── bin/
+            │       └── java    # <- El SCRIPT VERIFICA la existencia de este archivo para validar JAVA_HOME.
+            │
+            └── glassfish4/
+                └── bin/
+                    └── asadmin # <- El SCRIPT VERIFICA la existencia de este archivo para validar GLASSFISH_HOME.

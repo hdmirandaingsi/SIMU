@@ -1,0 +1,46 @@
+﻿/home/tu_usuario/Proyectos/<PROJECT_NAME>/
+│
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   └── com/
+    │   │       └── sistema_transporte/
+    │   │           ├── shared/
+    │   │           │   ├── security/
+    │   │           │   │   └── AuthFilter.java          # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │   └── util/
+    │   │           │       └── FacesUtil.java         # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │           │
+    │   │           └── usuarios/
+    │   │               ├── bean/
+    │   │               │   ├── GestionUsuariosBean.java # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               │   ├── LoginBean.java           # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               │   ├── RegistroBean.java        # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               │   └── SessionBean.java         # <- CREADO Y POBLADO.
+    │   │               ├── dao/
+    │   │               │   ├── RolDAO.java              # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               │   └── UsuarioDAO.java          # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               ├── entity/
+    │   │               │   ├── Rol.java                 # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               │   └── Usuario.java             # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │               └── service/
+    │   │                   └── UsuarioService.java      # <- POBLADO CON CÓDIGO FUNCIONAL.
+    │   │
+    │   ├── resources/
+    │   │   └── META-INF/
+    │   │       └── persistence.xml     # <- SOBRESCRITO para añadir entidades y la propiedad 'drop-and-create'.
+    │   │
+    │   └── webapp/
+    │       ├── admin/
+    │       │   ├── dashboard.xhtml           # <- POBLADO con una página de bienvenida para el admin.
+    │       │   └── usuarios/
+    │       │       └── lista.xhtml           # <- POBLADO con la tabla y formulario CRUD de usuarios.
+    │       ├── pasajero/
+    │       │   └── dashboard.xhtml           # <- POBLADO con una página de bienvenida para el pasajero.
+    │       ├── WEB-INF/
+    │       │   └── faces-config.xml        # <- SOBRESCRITO para añadir reglas de navegación.
+    │       │
+    │       ├── accesoDenegado.xhtml        # <- POBLADO con una página de error de permisos.
+    │       ├── login.xhtml                 # <- POBLADO con el formulario de inicio de sesión.
+    │       ├── registro.xhtml              # <- POBLADO con el formulario de registro.
+    │       └── template.xhtml              # <- POBLADO con la plantilla principal, menú de navegación, etc.

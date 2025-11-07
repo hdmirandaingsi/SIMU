@@ -1,0 +1,20 @@
+﻿/
+├── home/
+│   └── tu_usuario/                 # Directorio HOME del usuario que ejecuta el script.
+│       │
+│       ├── .project-env            # <- ARCHIVO DE ENTRADA. El SCRIPT LO LEE para obtener JAVA_HOME.
+│       │
+│       └── Proyectos/
+│           └── <PROJECT_NAME>/
+│               └── jdk1.8.0_112/
+│                   ├── bin/
+│                   │   └── keytool     # <- HERRAMIENTA UTILIZADA por el script para manipular el keystore.
+│                   └── jre/
+│                       └── lib/
+│                           └── security/
+│                               └── cacerts # <- ARCHIVO OBJETIVO. Es el "trust store" o almacén de confianza del JDK.
+│                                           #    EL SCRIPT MODIFICA ESTE ARCHIVO AÑADIENDO UN NUEVO CERTIFICADO.
+│
+└── tmp/
+    └── isrgrootx1.der              # <- ARCHIVO TEMPORAL. CREADO POR EL SCRIPT durante la descarga con 'curl'.
+                                    #    Es eliminado al final de la ejecución del script.

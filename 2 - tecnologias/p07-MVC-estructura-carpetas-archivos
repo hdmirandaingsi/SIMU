@@ -1,0 +1,148 @@
+﻿/home/tu_usuario/Proyectos/<PROJECT_NAME>/  # <- Directorio raíz del proyecto, creado en un script anterior.
+│
+├── build.sh            # <- CREADO POR EL SCRIPT. Para compilar el proyecto.
+├── deploy.sh           # <- CREADO POR EL SCRIPT. Para compilar y desplegar.
+│
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   └── com/
+    │   │       └── sistema_transporte/  # <- (El nombre del paquete varía según PROJECT_NAME)
+    │   │           ├── api/
+    │   │           │   ├── dto/
+    │   │           │   │   ├── UsuarioDTO.java
+    │   │           │   │   └── ViajeDTO.java
+    │   │           │   ├── exception/
+    │   │           │   │   └── RestExceptionHandler.java
+    │   │           │   └── resource/
+    │   │           │       ├── BilleteraResource.java
+    │   │           │       ├── FlotaResource.java
+    │   │           │       ├── HistorialResource.java
+    │   │           │       ├── ReporteResource.java
+    │   │           │       ├── RutaResource.java
+    │   │           │       ├── UsuarioResource.java
+    │   │           │       └── ViajeResource.java
+    │   │           ├── billetera/
+    │   │           │   ├── bean/
+    │   │           │   │   └── BilleteraBean.java
+    │   │           │   ├── dao/
+    │   │           │   │   ├── TarjetaDAO.java
+    │   │           │   │   └── TransaccionDAO.java
+    │   │           │   ├── entity/
+    │   │           │   │   ├── Tarjeta.java
+    │   │           │   │   ├── TipoTransaccion.java
+    │   │           │   │   └── Transaccion.java
+    │   │           │   └── service/
+    │   │           │       ├── BilleteraService.java
+    │   │           │       └── PasarelaPagoService.java
+    │   │           ├── flota/
+    │   │           │   ├── bean/
+    │   │           │   │   └── GestionAutobusesBean.java
+    │   │           │   ├── dao/
+    │   │           │   │   └── AutobusDAO.java
+    │   │           │   ├── entity/
+    │   │           │   │   └── Autobus.java
+    │   │           │   └── service/
+    │   │           │       └── FlotaService.java
+    │   │           ├── historial/
+    │   │           │   ├── bean/
+    │   │           │   │   └── HistorialBean.java
+    │   │           │   └── service/
+    │   │           │       └── ConsultaHistorialService.java
+    │   │           ├── reportes/
+    │   │           │   ├── bean/
+    │   │           │   │   └── DashboardBean.java
+    │   │           │   ├── dto/
+    │   │           │   │   ├── IngresosPorRutaDTO.java
+    │   │           │   │   └── PasajerosHoraPicoDTO.java
+    │   │           │   └── service/
+    │   │           │       └── AnaliticaService.java
+    │   │           ├── rutas/
+    │   │           │   ├── bean/
+    │   │           │   │   ├── GestionParadasBean.java
+    │   │           │   │   └── GestionRutasBean.java
+    │   │           │   ├── dao/
+    │   │           │   │   ├── ParadaDAO.java
+    │   │           │   │   ├── RutaDAO.java
+    │   │           │   │   └── TarifaDAO.java
+    │   │           │   ├── entity/
+    │   │           │   │   ├── Parada.java
+    │   │           │   │   ├── Ruta.java
+    │   │           │   │   └── Tarifa.java
+    │   │           │   └── service/
+    │   │           │       └── AdministracionRutasService.java
+    │   │           ├── shared/
+    │   │           │   ├── exception/
+    │   │           │   │   └── BusinessLogicException.java
+    │   │           │   ├── security/
+    │   │           │   │   └── AuthFilter.java
+    │   │           │   └── util/
+    │   │           │       ├── DateUtil.java
+    │   │           │       └── FacesUtil.java
+    │   │           ├── usuarios/
+    │   │           │   ├── bean/
+    │   │           │   │   ├── GestionUsuariosBean.java
+    │   │           │   │   ├── LoginBean.java
+    │   │           │   │   └── RegistroBean.java
+    │   │           │   ├── dao/
+    │   │           │   │   ├── RolDAO.java
+    │   │           │   │   └── UsuarioDAO.java
+    │   │           │   ├── entity/
+    │   │           │   │   ├── Rol.java
+    │   │           │   │   └── Usuario.java
+    │   │           │   └── service/
+    │   │           │       └── UsuarioService.java
+    │   │           └── viajes/
+    │   │               ├── bean/
+    │   │               │   ├── MapaTiempoRealBean.java
+    │   │               │   └── PlanificadorBean.java
+    │   │               ├── dto/
+    │   │               │   └── UbicacionAutobusDTO.java
+    │   │               ├── entity/
+    │   │               │   └── Viaje.java
+    │   │               └── service/
+    │   │                   ├── MonitoreoGPSService.java
+    │   │                   └── PlanificacionService.java
+    │   │
+    │   ├── resources/
+    │   │   └── META-INF/
+    │   │       └── persistence.xml     # <- CREADO Y POBLADO por el script.
+    │   │
+    │   └── webapp/
+    │       ├── admin/
+    │       │   ├── dashboard.xhtml
+    │       │   ├── flota/
+    │       │   │   ├── formulario.xhtml
+    │       │   │   └── lista.xhtml
+    │       │   ├── paradas/
+    │       │   │   ├── formulario.xhtml
+    │       │   │   └── lista.xhtml
+    │       │   ├── rutas/
+    │       │   │   ├── formulario.xhtml
+    │       │   │   └── lista.xhtml
+    │       │   └── usuarios/
+    │       │       ├── formulario.xhtml
+    │       │       └── lista.xhtml
+    │       ├── pasajero/
+    │       │   ├── billetera.xhtml
+    │       │   ├── dashboard.xhtml
+    │       │   ├── historial.xhtml
+    │       │   ├── mapa.xhtml
+    │       │   └── planificarViaje.xhtml
+    │       ├── resources/
+    │       │   ├── css/
+    │       │   │   └── style.css
+    │       │   ├── images/
+    │       │   └── js/
+    │       ├── WEB-INF/
+    │       │   ├── lib/
+    │       │   │   └── jbcrypt-0.4.jar   # <- COPIADO por el script.
+    │       │   ├── beans.xml           # <- CREADO Y POBLADO por el script.
+    │       │   ├── faces-config.xml    # <- CREADO Y POBLADO por el script.
+    │       │   └── web.xml             # <- CREADO Y POBLADO por el script.
+    │       ├── accesoDenegado.xhtml
+    │       ├── error.xhtml
+    │       ├── index.xhtml             # <- CREADO Y POBLADO por el script.
+    │       ├── login.xhtml
+    │       ├── registro.xhtml
+    │       └── template.xhtml

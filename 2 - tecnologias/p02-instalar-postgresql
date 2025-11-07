@@ -1,0 +1,62 @@
+﻿/
+├── etc/
+│   ├── postgresql/
+│   │   └── 13/                                   # Creado por 'apt install postgresql'
+│   │       └── main/
+│   │           ├── postgresql.conf               # Archivo de configuración principal. Creado por 'apt'.
+│   │           ├── pg_hba.conf                   # Archivo de autenticación de clientes. Creado por 'apt'.
+│   │           ├── pg_ident.conf                 # Mapeo de usuarios del sistema a usuarios de BD. Creado por 'apt'.
+│   │           ├── start.conf                    # Opciones de inicio. Creado por 'apt'.
+│   │           └── environment                   # Variables de entorno para el servicio. Creado por 'apt'.
+│   │
+│   └── systemd/
+│       └── system/
+│           └── multi-user.target.wants/
+│               └── postgresql.service -> /lib/systemd/system/postgresql.service  # <- ENLACE SIMBÓLICO CREADO por el comando 'systemctl enable' del SCRIPT.
+│
+├── usr/
+│   ├── bin/                                      # Creado por 'apt install postgresql'
+│   │   ├── psql                                  # Cliente interactivo de PostgreSQL.
+│   │   ├── pg_dump                               # Herramienta para hacer copias de seguridad.
+│   │   ├── createdb                              # Wrapper para 'CREATE DATABASE'.
+│   │   ├── createuser                            # Wrapper para 'CREATE USER'.
+│   │   └── ... (muchas otras utilidades de cliente)
+│   │
+│   └── lib/
+│       └── postgresql/
+│           └── 13/                               # Creado por 'apt install postgresql'
+│               ├── bin/
+│               │   ├── postgres                  # El ejecutable principal del servidor de base de datos.
+│               │   ├── postmaster                # (Enlace a postgres)
+│               │   └── initdb                    # Utilidad para inicializar un nuevo clúster de BD.
+│               │
+│               └── lib/
+│                   └── ... (librerías y extensiones, como las de 'postgresql-contrib')
+│
+├── var/
+│   ├── lib/
+│   │   └── postgresql/
+│   │       └── 13/
+│   │           └── main/                         # <- DIRECTORIO DE DATOS PRINCIPAL. Creado por 'apt'.
+│   │               │                             # <- El SCRIPT MODIFICA EL CONTENIDO INTERNO de este directorio al crear el usuario y la BD.
+│   │               ├── PG_VERSION                # Archivo de texto con la versión del formato de datos.
+│   │               ├── base/                     # Subdirectorio para las bases de datos.
+│   │               ├── global/                   # Subdirectorio para los objetos globales del clúster (roles, etc.).
+│   │               ├── pg_wal/                   # Subdirectorio para los logs de transacciones (Write-Ahead Log).
+│   │               ├── postgresql.auto.conf      # Configuración aplicada con ALTER SYSTEM.
+│   │               ├── postgresql.pid            # Archivo con el ID del proceso del servidor cuando está en ejecución.
+│   │               └── ... (muchos otros archivos y subdirectorios de datos)
+│   │
+│   └── log/
+│       └── postgresql/                           # Creado y gestionado por el servicio de PostgreSQL
+│           └── postgresql-13-main.log            # Archivo de log principal.
+│
+├── lib/
+│   └── systemd/
+│       └── system/
+│           └── postgresql.service                # <- Archivo de definición del servicio. Creado por 'apt'.
+│                                                 #    El SCRIPT INTERACTÚA con este archivo a través de 'systemctl start/enable'.
+│
+└── home/
+    └── tu_usuario/
+        └── p02-instalar-postgresql.sh            # <- El propio script que se está ejecutando.

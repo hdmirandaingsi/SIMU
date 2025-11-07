@@ -1,0 +1,23 @@
+﻿/home/tu_usuario/Proyectos/<PROJECT_NAME>/
+│
+└── src/
+    └── main/
+        └── java/
+            └── com/
+                └── sistema_transporte/
+                    └── api/
+                        ├── dto/
+                        │   ├── UsuarioDTO.java          # <- POBLADO CON CÓDIGO FUNCIONAL.
+                        │   └── ViajeDTO.java            # <- POBLADO CON CÓDIGO FUNCIONAL.
+                        │
+                        ├── exception/
+                        │   └── RestExceptionHandler.java  # <- POBLADO CON CÓDIGO FUNCIONAL.
+                        │
+                        └── resource/
+                            ├── BilleteraResource.java   # <- POBLADO CON CÓDIGO FUNCIONAL.
+                            ├── FlotaResource.java       # <- POBLADO CON CÓDIGO FUNCIONAL.
+                            ├── HistorialResource.java   # <- POBLADO CON CÓDIGO FUNCIONAL.
+                            ├── ReporteResource.java     # <- POBLADO CON CÓDIGO FUNCIONAL.
+                            ├── RutaResource.java        # <- POBLADO CON CÓDIGO FUNCIONAL.
+                            ├── UsuarioResource.java     # <- POBLADO CON CÓDIGO FUNCIONAL.
+                            └── ViajeResource.java       # <- POBLADO CON CÓDIGO FUNCIONAL.

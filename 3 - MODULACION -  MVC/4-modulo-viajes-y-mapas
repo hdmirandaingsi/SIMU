@@ -1,0 +1,19 @@
+﻿/home/tu_usuario/Proyectos/<PROJECT_NAME>/
+│
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/
+        │       └── sistema_transporte/
+        │           └── viajes/
+        │               ├── bean/
+        │               │   └── PlanificadorBean.java      # <- POBLADO CON CÓDIGO FUNCIONAL.
+        │               ├── dto/
+        │               │   └── UbicacionAutobusDTO.java   # <- POBLADO CON CÓDIGO FUNCIONAL (DTO).
+        │               └── service/
+        │                   └── PlanificacionService.java  # <- POBLADO CON CÓDIGO FUNCIONAL.
+        │
+        └── webapp/
+            └── pasajero/
+                └── planificarViaje.xhtml       # <- POBLADO con la interfaz de búsqueda, la tabla de resultados,
+                                                #    el mapa de Leaflet y el código JavaScript de integración.
